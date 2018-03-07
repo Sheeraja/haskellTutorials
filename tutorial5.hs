@@ -44,7 +44,7 @@ bloodOrangeSegments :: [Fruit] -> Int
 bloodOrangeSegments [] = 0
 bloodOrangeSegments (fruit:fruitList)
     | isBloodOrange fruit = case fruit of
-      Orange _ segments -> segments + bloodOrangeSegments fruitList
+      Orange x -> snd(x) + bloodOrangeSegments fruitList
     | otherwise = bloodOrangeSegments fruitList
 
 -- 3.
