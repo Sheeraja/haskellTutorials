@@ -34,10 +34,10 @@ instance Show Fruit where
   show (Orange variety segments) = "Orange(" ++ variety ++ "," ++ show segments ++ ")"
 
 -- 1.
-isBloodOrange :: Fruit -> Bool
-isBloodOrange (Apple _ _) = False
-isBloodOrange (Orange variety _) | variety `elem` ["Tarocco", "Moro", "Sanguinello"] = True
-                                 | otherwise = False
+isBloodOrange :: Fruit -> Bool 
+isBloodOrange (Apple _) = False
+isBloodOrange (Orange x) | fst(x) `elem` ["Tarocco","Moro","Sanguinello"] = True
+						   | otherwise = False
 
 -- 2.
 bloodOrangeSegments :: [Fruit] -> Int
